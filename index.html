@@ -1,0 +1,200 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Kelvin Muduyaa's personal portfolio showcasing interests in business, IT, and tech." />
+  <title>Kelvin Muduyaa - Portfolio</title>
+
+  <!-- Font Awesome CDN for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f1f2b5, #135058);
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+
+    header, footer {
+      background-color: #041f43;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #f9ca24;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #dff9fb;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background-color: #0abde3;
+      padding: 10px;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      background-color: rgba(255, 255, 255, 0.1);
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: #ffdd59;
+      animation: fadeIn 2s ease-in-out;
+      border-bottom: 2px solid #ffdd59;
+      padding-bottom: 5px;
+    }
+
+    img {
+      max-width: 300px;
+      border-radius: 10px;
+      display: block;
+      margin: 10px auto;
+    }
+
+    footer {
+      font-size: 0.9em;
+      color: #f1f1f1;
+    }
+
+    /* Music button styles */
+    #music-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #f9ca24;
+      border: none;
+      padding: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.8rem;
+      color: #041f43;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: background 0.3s ease;
+      z-index: 1000;
+    }
+
+    #music-btn:hover {
+      background: #ffdd59;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #f9ca24; }
+      to { text-shadow: 0 0 20px #f0932b; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="background.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Music control button -->
+  <button id="music-btn" onclick="toggleMusic()" aria-label="Play or pause music">
+    <i class="fa-solid fa-play"></i>
+  </button>
+
+  <header>
+    <h1>Kelvin Muduyaa</h1>
+    <p>Student | Tech Enthusiast | Business-minded</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#interests">Interests</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="kelvin.jpg" alt="Kelvin Muduyaa at work" />
+      <p>Hello! I’m Kelvin Muduyaa, a passionate student pursuing a course in Business Administration with IT (BBA) at Maseno University. I also hold a certificate in Information Technology and have a strong interest in blending business and tech for smart solutions. I enjoy learning, working on real projects, and helping others grow through tech.</p>
+    </section>
+
+    <section id="education"><h2>Education</h2>
+      <p><strong>Current Program:</strong> Bachelor of Business Administration with IT - Maseno University</p>
+      <p><strong>Additional:</strong> Certificate in Information Technology</p>
+    </section>
+
+    <section id="interests">
+      <h2>Interests</h2>
+      <ul>
+        <li>Web Development & HTML5</li>
+        <li>Small Business Tech Solutions</li>
+        <li>Learning New Technologies</li>
+        <li>Community Empowerment Through IT</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:kmuduyaa@gmail.com">kmuduyaa@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kelvin Muduyaa</p>
+  </footer>
+
+  <script>
+    const music = document.getElementById('bg-music');
+    const btn = document.getElementById('music-btn');
+    const icon = btn.querySelector('i');
+
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+        icon.classList.remove('fa-play');
+        icon.classList.add('fa-pause');
+      } else {
+        music.pause();
+        icon.classList.remove('fa-pause');
+        icon.classList.add('fa-play');
+      }
+    }
+  </script>
+</body>
+</html>
+```
