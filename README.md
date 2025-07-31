@@ -1,2 +1,0 @@
-# PLP-HTML-ASSIGNMENT
-My First HTML Task
